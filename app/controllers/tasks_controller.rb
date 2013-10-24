@@ -1,5 +1,23 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:show, :edit, :update, :destroy]
+  before_action :set_task, only: [:show, :edit, :update,
+                                 :destroy, :complete]
+
+  def complete
+    respond_to do |format|
+      if @task.complete
+        format.html { 
+          redirect_to tasks_path, 
+            notice: 'Task was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { 
+          redirect_to tasks_path, 
+            notice: 'the task has not been marked complete' }
+        format.json { render json: @task.errors, 
+                        status: :unprocessable_entity }
+      end
+    end
+  end
 
   # GET /tasks
   # GET /tasks.json

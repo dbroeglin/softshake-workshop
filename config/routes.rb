@@ -1,5 +1,7 @@
 Todo::Application.routes.draw do
   resources :tasks
+  patch 'tasks/complete/:id' => "tasks#complete", \
+    as: :complete_task
   root "tasks#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
