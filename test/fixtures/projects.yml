@@ -3,7 +3,6 @@
 one:
   title: MyString
   completed: false
-  due_date: 2013-10-24
 
 two:
   title: MyString
