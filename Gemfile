@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'capybara', '2.1.0'
+
 gem 'bootstrap-sass', '2.3.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

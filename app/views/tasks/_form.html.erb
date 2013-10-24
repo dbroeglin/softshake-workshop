@@ -19,6 +19,11 @@
     <%= f.label :completed %>
     <%= f.check_box :completed %>
   </div>
+  <div class="field">
+    <%= f.label :project %>
+    <%= f.select :project_id,
+      Project.all.map {|p| [p.title, p.id]} %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
