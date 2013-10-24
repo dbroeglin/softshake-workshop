@@ -8,4 +8,9 @@ class TaskTest < ActiveSupport::TestCase
 
     assert Task.find_by_project_id(projects(:one).id) == task
   end
+
+  test "a new task should not be completed" do
+    t = Task.new
+    assert t.completed == false
+  end
 end
