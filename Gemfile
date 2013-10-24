@@ -8,7 +8,8 @@ gem 'bootstrap-sass', '2.3.2.0'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
+gem 'activerecord-jdbcsqlite3-adapter'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -47,3 +48,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem "torquebox", "~> 3.0.0"
