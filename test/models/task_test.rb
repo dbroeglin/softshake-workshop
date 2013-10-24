@@ -13,4 +13,10 @@ class TaskTest < ActiveSupport::TestCase
     t = Task.new
     assert t.completed == false
   end
+
+  test "title should be present"  do
+    t = Task.create
+
+    assert_match(/can't be blank/, t.errors[:title].first)
+  end
 end
